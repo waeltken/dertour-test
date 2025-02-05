@@ -6,8 +6,8 @@ app = FastAPI()
 
 
 @app.get("/")
-def read_root():
-    return JSONResponse(content={"message": "Hello, World!"})
+def read_root(name: str = "World"):
+    return JSONResponse(content={"message": f"Hello, {name}!"})
 
 
 @app.get("/health")
