@@ -23,4 +23,4 @@ COPY --from=builder ${VIRTUAL_ENV} ${VIRTUAL_ENV}
 
 COPY . .
 
-ENTRYPOINT ["gunicorn", "api.main:app"]
+ENTRYPOINT ["gunicorn", "main:app"]
