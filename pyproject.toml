@@ -1,27 +1,19 @@
-[project]
+[tool.poetry]
 name = "dertour"
 version = "0.1.0"
-description = "Sample application using buildpacks"
-authors = [
-    {name = "Clemens Wältken",email = "clemens.waltken@microsoft.com"}
-]
+description = "Sample application with python poetry and build using buildpacks."
+authors = ["Clemens Wältken <clemens.waltken@microsoft.com>"]
 readme = "README.md"
-requires-python = ">=3.12"
-dependencies = [
-    "fastapi (>=0.115.8,<0.116.0)",
-    "uvicorn (>=0.34.0,<0.35.0)",
-    "gunicorn (>=23.0.0,<24.0.0)"
-]
+package-mode = false
+
 
 [tool.poetry.dependencies]
-python = "^3.12"
-fastapi = "^0.115.4"
-uvicorn = {extras = ["standard"], version = "^0.34.0"}
+python = "^3.11"
 gunicorn = "^23.0.0"
+uvicorn = "^0.34.0"
+fastapi = "^0.115.8"
+
 
 [build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
+requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
-
-[tool.poetry]
-package-mode = false
