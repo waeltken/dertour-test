@@ -6,13 +6,18 @@ authors = [
     {name = "Clemens Wältken",email = "clemens.waltken@microsoft.com"}
 ]
 readme = "README.md"
-requires-python = ">=3.13"
+requires-python = ">=3.12"
 dependencies = [
     "fastapi (>=0.115.8,<0.116.0)",
     "uvicorn (>=0.34.0,<0.35.0)",
     "gunicorn (>=23.0.0,<24.0.0)"
 ]
 
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.4"
+uvicorn = {extras = ["standard"], version = "^0.34.0"}
+gunicorn = "^23.0.0"
 
 [build-system]
 requires = ["poetry-core>=2.0.0,<3.0.0"]
